@@ -1,0 +1,20 @@
+{
+  "emmet.includeLanguages": { 
+    "javascript": "javascriptreact" 
+ },
+
+  "emmet.preferences": {
+  
+  },
+  "emmet.excludeLanguages": [
+    
+
+    "markdown"
+  ],
+
+  "files.autoSave": "onFocusChange",
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  }
+}
