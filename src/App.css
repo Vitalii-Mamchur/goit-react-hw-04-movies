@@ -1,7 +1,19 @@
+.flexNav {
+  display: flex;
+  padding: 15px 45px;
+  margin-bottom: 16px;
+  background-color: #d3d1d1;
+  border-bottom: solid 2px #928e8e;
+}
+
+.flexNav_item {
+  padding-right: 15px;
+}
+
 .NavLink {
   color: inherit;
 }
 
 .NavLinkActive {
-  color: lightcoral;
+  color: rgb(194, 95, 95);
 }
