@@ -1,1 +1,0 @@
-{"version":3,"sources":["webpack://src/components/FilmsList/filmsList.module.css"],"names":[],"mappings":"AAAA,iCACE,mBACF","file":"4.89b78c1c.chunk.css","sourcesContent":[".HomePage__item {\r\n  padding-bottom: 10px;\r\n}\r\n"]}
