@@ -19,14 +19,14 @@ class Cast extends Component {
     const acters = this.state.acters;
     return acters.length > 0 ? (
       <ul className="">
-        {acters.map(({ id, name, character, profile_path }) => (
-          <Acter
-            key={id}
-            acterId={id}
-            name={name}
-            character={character}
-            photo={profile_path}
-          />
+        {acters.map(({ credit_id, name, character, profile_path }) => (
+          <li  key={credit_id}>
+            <Acter
+              name={name}
+              character={character}
+              photo={profile_path}
+            />
+          </li>
         ))}
       </ul>
     ) : (

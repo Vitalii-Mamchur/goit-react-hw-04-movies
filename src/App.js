@@ -22,7 +22,7 @@ const Reviews = lazy(() =>
 // import NotFoundView from "./views/NotFoundView";
 
 const App = () => (
-  <>
+  <div className="container">
     <ul className="flexNav">
       <li className="flexNav_item">
         <NavLink
@@ -59,7 +59,7 @@ const App = () => (
         <Route component={HomePage} />
       </Switch>
     </Suspense>
-  </>
+  </div>
 );
 
 export default App;

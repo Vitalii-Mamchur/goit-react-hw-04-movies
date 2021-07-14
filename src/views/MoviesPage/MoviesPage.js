@@ -6,10 +6,21 @@ import FilmsList from "../../components/FilmsList";
 class MoviesPage extends Component {
   state = { movies: [], searchQuery: "" };
 
+  componentDidMount() {
+    if (localStorage.getItem("movies") !== null) {
+      this.setState({ movies: JSON.parse(localStorage.getItem("movies")) });
+    }
+  }
+
   componentDidUpdate(prevProps, prevState) {
     if (prevState.searchQuery !== this.state.searchQuery) {
       this.fetchMovies(this.state.searchQuery);
     }
+  }
+
+  componentWillUnmount(nextProps, nextState) {
+    const movies = this.state.movies;
+    localStorage.setItem("movies", JSON.stringify(movies));
   }
 
   handleChangeQuery = (query) => {
@@ -19,7 +30,9 @@ class MoviesPage extends Component {
   fetchMovies = () => {
     const searchQuery = this.state.searchQuery;
     onSearchQuery(searchQuery).then((res) =>
-      this.setState({ movies: res.data.results })
+      res.data.total_results
+        ? this.setState({ movies: res.data.results })
+        : alert("No results were found for your request, please try again")
     );
   };
 
